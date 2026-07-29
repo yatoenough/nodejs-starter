@@ -1,12 +1,4 @@
-import { z } from "zod";
-
-const UserSchema = z.object({
-  id: z.number(),
-  name: z.string(),
-  email: z.email(),
-});
-
-type User = z.infer<typeof UserSchema>;
+import { type User, UserSchema } from "@/user.js";
 
 function greet(user: User) {
   console.log(`Hello, ${user.name} (${user.email})!`);
