@@ -7,7 +7,7 @@ function greet(user: User) {
 const parsedUser = UserSchema.parse({
   id: 1,
   name: "Demo",
-  email: "dmeouser@example.com",
+  email: "demouser@example.com",
 });
 
 greet(parsedUser);
