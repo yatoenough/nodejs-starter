@@ -4,12 +4,11 @@
   "description": "",
   "main": "dist/main.js",
   "scripts": {
-    "dev": "tsx watch --watch-path src src/index.ts",
-    "predev": "pnpm build",
-    "build": "tsup src/index.ts --format esm --clean",
-    "build:watch": "tsup src/index.ts --format esm --watch",
+    "dev": "tsx watch src/main.ts",
+    "build": "tsup src/main.ts --format esm --clean",
+    "build:watch": "tsup src/main.ts --format esm --watch",
+    "start": "node dist/main.js",
     "prestart": "pnpm build",
-    "start": "node dist/index.js",
     "typecheck": "tsc --noEmit",
     "lint": "biome check .",
     "format": "biome format --write ."
